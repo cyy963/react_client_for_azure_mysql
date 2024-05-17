@@ -1,12 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-const API_HOST = "https://brave-tree-07b4ff410.5.azurestaticapps.net";
+// const API_HOST = import.meta.env.VITE_APP_API_HOST;
+const API_HOST = "https://week2-day4.azurewebsites.net"
 console.log(API_HOST);
 
 export function Countries() {
   const { isPending, error, data, isFetching } = useQuery({
     queryKey: ["countries"],
     queryFn: () => axios.get(`${API_HOST}`).then((res) => res.data),
+    console.log(res.data)
   });
  
   return (
