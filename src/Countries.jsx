@@ -8,7 +8,6 @@ export function Countries() {
   const { isPending, error, data, isFetching } = useQuery({
     queryKey: ["countries"],
     queryFn: () => axios.get(`${API_HOST}`).then((res) => res.data),
-    console.log(res.data)
   });
  
   return (
