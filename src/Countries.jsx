@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-const API_HOST = import.meta.env.VITE_APP_API_HOST;
+const API_HOST = "https://brave-tree-07b4ff410.5.azurestaticapps.net";
 console.log(API_HOST);
 
 export function Countries() {
